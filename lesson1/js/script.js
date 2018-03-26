@@ -1,5 +1,5 @@
-var money = prompt("Ваш бюджет?", '');
-name = prompt("Название вашего магазина?", '');
+var money = prompt('Ваш бюджет?', '');
+name = prompt('Название вашего магазина?', '');
 
 mainList = {
     budget: money,

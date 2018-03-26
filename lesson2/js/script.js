@@ -1,3 +1,4 @@
+
 let money = prompt('Ваш бюджет?', '');
 let name = prompt('Название вашего магазина?', '');
 
@@ -8,9 +9,8 @@ let mainList = {
     employers: {},
     open: true
 };
-
-
 /*
+
 for( let i = 0; i < 3; i++){
     let a = prompt('Какой тип товаров будем продавать?', '');
     if (typeof(a) === 'string' && typeof(a) !== null && a != '' && a.length < 50){
@@ -21,9 +21,9 @@ for( let i = 0; i < 3; i++){
         i--;
     }
 }
-*/
 
-/*let i = 0;
+
+let i = 0;
 for(; i < 3; i++){
     let a = prompt('Какой тип товаров будем продавать?', '');
     if (typeof(a) === 'string' && typeof(a) !== null && a != '' && a.length < 50){
@@ -33,7 +33,8 @@ for(; i < 3; i++){
         alert('Вы ввели неверные значения. Попробуйте еще раз!');
         i--;
     }
-}*/
+*/
+
 
 let i = 0;
 do {

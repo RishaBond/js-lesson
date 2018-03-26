@@ -1,7 +1,7 @@
 var money = prompt('Ваш бюджет?', '');
-name = prompt('Название вашего магазина?', '');
+var name = prompt('Название вашего магазина?', '');
 
-mainList = {
+var mainList = {
     budget: money,
     shopName: name,
     shopGoods: [],

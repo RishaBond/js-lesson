@@ -1,7 +1,8 @@
-
 let money,
     name,
-    time;
+    time,
+    price,
+    discount;
 
 function start() {
     money = prompt('Ваш бюджет?', '123456');
@@ -10,18 +11,19 @@ function start() {
     }
     name = prompt('Название вашего магазина?', 'Леонардо').toUpperCase();
     time = 19;
+    price = 1555;
+    discount = true;
 }
-start();
+// start();
 
 let mainList = {
     budget: money,
     shopName: name,
     shopGoods: [],
     employers: {},
-    open: false,
-    discount: false
+    open: false
 };
-
+//Выбираем тип товаров
 function chooseGoods() {
     let i = 0;
     do {
@@ -35,8 +37,8 @@ function chooseGoods() {
         }
     } while (i < 3);
 }
-chooseGoods();
 
+// Узнаем, работает ли магазин
 function workTime(time) {
     if (time < 0) {
         console.log('Такого не может быть!');
@@ -48,9 +50,43 @@ function workTime(time) {
                     console.log('В сутках 24 часа!');
                 }
 }
+
+//Выводим бюджет на 1 день
+function budgetDay() {
+    alert('Ваш бюджет на 1 день составит ' + mainList.budget / 30);
+}
+
+//Заносим имена новых сотрудников
+function hiring() {
+    for( let j = 1; j < 5; j++){
+        let a = prompt('Введите имя ' + j + ' сотрудника');
+        if (typeof(a) === 'string' && typeof(a) !== null && a != '' && a.length < 20){
+            console.log('Все верно');
+            mainList.employers[j] = a;
+        } else {
+            alert('Попробуйте еще раз!');
+            j--;
+        }
+    }
+}
+
+//Выводим старую и новую уцену на товар с учетом скидки
+function discountDay() {
+    if (discount){
+        alert('Хочешь скидку? ;)');
+        alert('Старая цена товара ' + price);
+        price *= 0.8;
+        alert('Новая цена товара ' + price);
+    } else {
+        alert('Сегодня скидок нет');
+    }
+}
+
+
+chooseGoods();
 workTime();
-
-
-alert('Ваш бюджет на 1 день составит ' + mainList.budget / 30);
+budgetDay();
+hiring();
+discountDay();
 
 console.log(mainList);

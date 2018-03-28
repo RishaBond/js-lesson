@@ -96,6 +96,7 @@ let mainList = {
 console.log('В нашем магазине есть: ');
 for(let key in mainList){
     console.log(key);
+    console.log(key);
 }
 
 console.log(mainList);

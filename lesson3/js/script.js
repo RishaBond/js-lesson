@@ -14,7 +14,6 @@ function start() {
     price = 1555;
     discount = true;
 }
-// start();
 
 let mainList = {
     budget: money,

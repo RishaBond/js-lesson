@@ -71,19 +71,13 @@ let mainList = {
         }
     },
     chooseShopItems: function chooseShopItems() {
-        for(let n = 0; n < 1; n++){
-            let items = prompt('Перечислите через запятую ваши товары');
-            let sec = prompt('Подождите, еще ', '');
-            if (typeof(items) === 'string' && typeof(items) !== null && items != ''){
-                mainList.shopItems = items.split(',');
-            } if (typeof(sec) === 'string' && typeof(sec) !== null && sec != ''){
-                mainList.shopItems.push(sec);
-                mainList.shopItems.sort();
-            } else {
-                alert('Вы ввели неверные значения. Попробуйте еще раз!');
-                n--;
-            }
+        let items = prompt('Перечислите через запятую товары', '');
+        while (!isNaN(items) || items == null || items == '') {
+            items = prompt('Попробуйте еще раз!', '');
         }
+        mainList.shopItems = items.split(', ');
+        mainList.shopItems.push(prompt("Подождите, еще", ''));
+        mainList.shopItems.sort();
     },
     showShopItem: function showShopItem(){
         mainList.shopItems.forEach(function (item, i, shopItems) {
@@ -95,7 +89,6 @@ let mainList = {
 
 console.log('В нашем магазине есть: ');
 for(let key in mainList){
-    console.log(key);
     console.log(key);
 }
 

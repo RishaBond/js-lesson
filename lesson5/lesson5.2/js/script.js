@@ -1,0 +1,22 @@
+let openBtn = document.getElementById('open-btn'),
+    name = document.getElementsByClassName('name'),
+    budget = document.getElementsByClassName('budget'),
+    goods = document.getElementsByClassName('goods'),
+    item = document.getElementsByClassName('item'),
+    employers = document.getElementsByClassName('employers'),
+    discount = document.getElementsByClassName('discount'),
+    isopen = document.getElementsByClassName('isopen'),
+    nameVal = document.getElementsByClassName('name-value'),
+    budgetVal = document.getElementsByClassName('budget-value'),
+    goodsVal = document.getElementsByClassName('goods-value'),
+    itemVal = document.getElementsByClassName('item-value'),
+    employersVal = document.getElementsByClassName('employers-value'),
+    discountVal = document.getElementsByClassName('discount-value'),
+    isopenVal = document.getElementsByClassName('isopen-value'),
+    buttons = document.getElementsByTagName('button'),
+    goodsItem = document.querySelectorAll('.goods-item'),
+    timeVal = document.querySelector('#time'),
+    countBudgetVal = document.querySelector('#budget'),
+    employersItem = document.querySelectorAll('.hire-employers-item');
+
+console.log(openBtn);

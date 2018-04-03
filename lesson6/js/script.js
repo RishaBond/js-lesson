@@ -21,6 +21,10 @@ let money,
     price;
 
 openBtn.addEventListener('click', ()=> {
+    setTimeout(start, 2000);
+});
+
+function start() {
     money = prompt('Ваш бюджет?', '123456');
     while (isNaN(money) || money == null || money == ''){
         money = prompt('Ваш бюджет?', '123456');
@@ -28,7 +32,8 @@ openBtn.addEventListener('click', ()=> {
     budgetVal.textContent = money;
 
     nameVal.textContent = prompt('Название вашего магазина?', 'Леонардо').toUpperCase();
-});
+
+}
 
 goodsBtn.addEventListener('click', ()=>{
     for( let i = 0; i < goodsItem.length; i++){

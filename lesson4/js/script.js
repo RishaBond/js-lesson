@@ -71,19 +71,22 @@ let mainList = {
         }
     },
     chooseShopItems: function chooseShopItems() {
-        let items = prompt('Перечислите через запятую товары', '');
-        while (!isNaN(items) || items == null || items == '') {
-            items = prompt('Попробуйте еще раз!', '');
+        for (i = 0; i < 1; i++) {
+
+            let items = prompt("Перечислите Ваши товары через запятую", "");
+
+            if ((typeof(items)) === 'string' && (typeof(items)) != null && items != '' && isNaN(items)) {
+                mainList.shopItems = items.split(",");
+                mainList.shopItems.push(prompt("Вы точно указали все товары, которые необходимы?", ""));
+                mainList.shopItems.sort();
+                mainList.shopItems.forEach(function (item, i, arr) {
+                    alert("У нас вы можете купить: " + (i + 1) + ":" + item);
+                })
+
+            } else {
+                i = i - 1;
+            }
         }
-        mainList.shopItems = items.split(', ');
-        mainList.shopItems.push(prompt("Подождите, еще", ''));
-        mainList.shopItems.sort();
-    },
-    showShopItem: function showShopItem(){
-        mainList.shopItems.forEach(function (item, i, shopItems) {
-            i++;
-            alert('Вы можете купить у нас ' + i + ': ' + item );
-        });
     }
 };
 

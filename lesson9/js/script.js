@@ -49,7 +49,8 @@ window.addEventListener('DOMContentLoaded', function () {
             minutes = timer.querySelector('.minutes'),
             seconds = timer.querySelector('.seconds');
             function updateClock() {
-                let t = getTimerRemaining(endtime);
+                let t = getTimerRemaining(endtime),
+                    timeInterval = setInterval(updateClock, 1000);
                 hours.innerHTML = t.hours;
                 minutes.innerHTML = t.minutes;
                 seconds.innerHTML = t.seconds;
@@ -57,11 +58,10 @@ window.addEventListener('DOMContentLoaded', function () {
                     hours.innerHTML = '00';
                     minutes.innerHTML = '00';
                     seconds.innerHTML = '00';
-                    clearInterval('timeInterval');
+                    clearInterval(timeInterval);
                 }
-            };
+            }
             updateClock();
-            let timeInterval = setInterval(updateClock, 1000);
     }
     setClock('timer', deadline);
 // Модальное окно
@@ -79,12 +79,11 @@ window.addEventListener('DOMContentLoaded', function () {
         more.classList.remove('more-splash');
         document.body.style.overflow = '';
     });
-    for (let i = 0; i < descriptionBtn.length; i++){
+    for (let i = 0; i < descriptionBtn.length; i++) {
         descriptionBtn[i].addEventListener('click', function () {
             this.classList.add('more-splash');
             overlay.style.display = 'block';
             document.body.style.overflow = 'hidden';
         });
     }
-
 });

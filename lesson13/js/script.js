@@ -243,7 +243,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
     place.addEventListener('change', function () {
-       if (persons.value == '' || restDays.value == '' || restDays.value <= 0 || persons.value <= 0 ){
+       if (restDays.value <= 0 || persons.value <= 0 ){
            totalVaiue.innerHTML = 0;
        } else {
            let a = total;

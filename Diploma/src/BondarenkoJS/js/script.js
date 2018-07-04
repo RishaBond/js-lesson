@@ -181,6 +181,7 @@ window.addEventListener('DOMContentLoaded', function () {
         clothesSlideIndex = 4;
     });
 
+
 // Слайдер
 
     let prev = document.getElementsByClassName( 'prev' ),
@@ -300,6 +301,7 @@ window.addEventListener('DOMContentLoaded', function () {
             clothesSlides[clothesSlideIndex - 1].style.display = 'block';
             clothesArrFemale[clothesSlideIndex - 1 - 3]();
         }
+
     }
     function plusClothesSlides ( n ) {
         showClothesSlides( clothesSlideIndex += n );
@@ -378,8 +380,10 @@ window.addEventListener('DOMContentLoaded', function () {
         photoShoes.style.backgroundSize = 'cover';
 
         for (let i = 0; i < resultCounts.length; i++) {
+
             resultCounts[i].textContent = 0 + "%";
             progressBars[i].style.height = '0%';
+
         }
     });
 

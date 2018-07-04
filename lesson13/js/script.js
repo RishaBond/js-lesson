@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 // Таймер
-    let deadline = '2018-04-7';
+    let deadline = '2018-11-7';
     function getTimerRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
             seconds = Math.floor( (t/1000) % 60 ),
